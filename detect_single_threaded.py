@@ -78,8 +78,9 @@ if __name__ == '__main__':
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
     image_np = cv2.imread(args.image_source)
-    print(args.image_source)
+    
     path = args.image_source.split('/')[-1]
+    print(path)
     dir = "/content/runs/" +path
     cv2.imwrite('Single-Threaded Detection',image_np)
     #im_height,im_width,im_channels  = image_np.shape
