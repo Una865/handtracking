@@ -77,7 +77,7 @@ if __name__ == '__main__':
     #num_hands_detect = 2
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
-    image = cv2.imread(args.image_source)
+    image_np = cv2.imread(args.image_source)
     
     boxes, scores = detector_utils.detect_objects(image_np,
                                                       detection_graph, sess)
