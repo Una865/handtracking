@@ -78,16 +78,17 @@ if __name__ == '__main__':
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
     image_np = cv2.imread(args.image_source)
-    im_height,im_width,im_channels  = image_np.shape
+    print(args.image_source)
+    #im_height,im_width,im_channels  = image_np.shape
     
-    boxes, scores = detector_utils.detect_objects(image_np,
+    #boxes, scores = detector_utils.detect_objects(image_np,
                                                       detection_graph, sess)
 
         # draw bounding boxes on frame
-    detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
-                                         scores, boxes, im_width, im_height,
-                                         image_np)
+    #detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
+                                         #scores, boxes, im_width, im_height,
+                                         #image_np)
     
-    cv2.imshow('Single-Threaded Detection',imgage_np)
+    #cv2.imshow('Single-Threaded Detection',imgage_np)
 
   
