@@ -82,7 +82,7 @@ if __name__ == '__main__':
     #im_height,im_width,im_channels  = image_np.shape
     
     #boxes, scores = detector_utils.detect_objects(image_np,
-                                                      detection_graph, sess)
+                                                      #detection_graph, sess)
 
         # draw bounding boxes on frame
     #detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
