@@ -82,17 +82,16 @@ if __name__ == '__main__':
     path = args.image_source.split('/')[-1]
     print(path)
     dir = "/content/runs/" +path
-    cv2.imwrite(dir,image_np)
-    #im_height,im_width,im_channels  = image_np.shape
+    im_height,im_width,im_channels  = image_np.shape
     
-    #boxes, scores = detector_utils.detect_objects(image_np,
-                                                      #detection_graph, sess)
+    boxes, scores = detector_utils.detect_objects(image_np,
+                                                      detection_graph, sess)
 
-        # draw bounding boxes on frame
-    #detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
-                                         #scores, boxes, im_width, im_height,
-                                         #image_np)
+      #draw bounding boxes on frame
+    detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
+                                         scores, boxes, im_width, im_height,
+                                         image_np)
     
-    #cv2.imshow('Single-Threaded Detection',imgage_np)
+    cv2.imwrite(dir,image_np)
 
   
