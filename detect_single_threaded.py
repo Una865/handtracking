@@ -74,10 +74,11 @@ if __name__ == '__main__':
     #num_frames = 0
     #im_width, im_height = (cap.get(3), cap.get(4))
     # max number of hands we want to detect/track
-    #num_hands_detect = 2
+    num_hands_detect = 2
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
     image_np = cv2.imread(args.image_source)
+    im_height,im_width,im_channels  = image_np.shape
     
     boxes, scores = detector_utils.detect_objects(image_np,
                                                       detection_graph, sess)
@@ -87,7 +88,6 @@ if __name__ == '__main__':
                                          scores, boxes, im_width, im_height,
                                          image_np)
     
-    cv2.imshow('Single-Threaded Detection',
-                       cv2.cvtColor(image_np, cv2.IMREAD_UNCHANGED))
+    cv2.imshow('Single-Threaded Detection',imgage_np)
 
   
