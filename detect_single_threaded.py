@@ -82,6 +82,7 @@ if __name__ == '__main__':
     path = args.image_source.split('/')[-1]
     print(path)
     dir = "/content/runs/" +path
+    text_file =  "/content/runs/" + path.split('.jpg')[0] +".txt"
     im_height,im_width,im_channels  = image_np.shape
     
     boxes, scores = detector_utils.detect_objects(image_np,
@@ -90,7 +91,7 @@ if __name__ == '__main__':
       #draw bounding boxes on frame
     detector_utils.draw_box_on_image(num_hands_detect, args.score_thresh,
                                          scores, boxes, im_width, im_height,
-                                         image_np)
+                                         image_np,text_file)
     
     cv2.imwrite(dir,image_np)
 
