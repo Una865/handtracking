@@ -82,7 +82,7 @@ if __name__ == '__main__':
     path = args.image_source.split('/')[-1]
     print(path)
     dir = "/content/runs/" +path
-    cv2.imwrite('Single-Threaded Detection',image_np)
+    cv2.imwrite(dir,image_np)
     #im_height,im_width,im_channels  = image_np.shape
     
     #boxes, scores = detector_utils.detect_objects(image_np,
