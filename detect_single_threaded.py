@@ -78,7 +78,6 @@ if __name__ == '__main__':
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
     image = cv2.imread(args.image_source)
-    image_np = cv2.cvtColor(image,cv2.IMREAD_UNCHANGED)
     
     boxes, scores = detector_utils.detect_objects(image_np,
                                                       detection_graph, sess)
