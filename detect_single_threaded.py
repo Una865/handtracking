@@ -27,7 +27,7 @@ if __name__ == '__main__':
         '-src',
         '--source',
         #dest='image_source',
-        dest = 'video_source,
+        dest = 'video_source',
         default=0,
         help='Device index of the camera.')
     parser.add_argument(
