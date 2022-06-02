@@ -78,6 +78,7 @@ if __name__ == '__main__':
 
     #cv2.namedWindow('Single-Threaded Detection', cv2.WINDOW_NORMAL)
     image_np = cv2.imread(args.image_source)
+    cv2.cvtColor(image_np, cv2.COLOR_BGR2RGB)
     
     path = args.image_source.split('/')[-1]
     print(path)
