@@ -63,7 +63,7 @@ def draw_box_on_image(num_hands_detect, score_thresh, scores, boxes, im_width, i
             width = int(left)-int(right)*1.0/im_width
             height = int(bottom)-int(right)*1.0/im_height
             
-            one_line = str(x_center)+" "+str(y_center)+" " + str(widht)+" " + str(height)+"\n"
+            one_line = str(x_center)+" "+str(y_center)+" " + str(width)+" " + str(height)+"\n"
             #one_line = str((boxes[i][3]+boxes[i][1])/2)+" "+ str((boxes[i][2]+boxes[i][0])/2)+" "+str(boxes[i][3]-boxes[i][1])+" "+str(boxes[i][2]-boxes[i][0])+"\n"
             list_of_lines.append(one_line)
             p1 = (int(left), int(top))
