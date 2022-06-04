@@ -96,6 +96,8 @@ if __name__ == '__main__':
                                          scores, boxes, im_width, im_height,
                                          image_np,text_file)
     
+    
+    image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
     cv2.imwrite(dir,image_np)
 
     
